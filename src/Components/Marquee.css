@@ -1,0 +1,82 @@
+/* Marquee Wrapper */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  padding: 1rem 0;
+}
+
+/* Marquee Container */
+.marquee-container {
+  display: flex;
+  width: 100%;
+  /* overflow-x: hidden; */
+  white-space: nowrap;
+}
+
+/* Marquee Content - Animating element */
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+  will-change: transform;
+  background: transparent;
+  background: #22004B;
+}
+
+/* Marquee Text */
+.marquee-text {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 1rem 3rem;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+}
+
+/* Keyframe Animation - Continuous Scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover (optional) */
+.marquee-wrapper:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+  .marquee-text {
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  
+  .marquee-wrapper {
+    padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-text {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+  }
+  
+  .marquee-wrapper {
+    padding: 0.5rem 0;
+  }
+  
+  .marquee-content {
+    animation: scroll 25s linear infinite;
+  }
+}

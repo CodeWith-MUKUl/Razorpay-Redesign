@@ -1,4 +1,4 @@
-# Razorpay Clone
+# Razorpay Redesign
 
 A modern, responsive redesign/clone of the Razorpay website built with **React**, **Vite**, and **Tailwind CSS**. This project features smooth animations using **GSAP** and **Framer Motion**, creating a premium user experience.
 

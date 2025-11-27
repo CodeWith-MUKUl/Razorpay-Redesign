@@ -73,7 +73,8 @@ export default function Footer() {
 
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between items-center mt-6 text-white/60 text-sm">
+   <FadeUp>
+     <div className="flex flex-col md:flex-row justify-between items-center mt-6 text-white/60 text-sm">
 
         <FadeUp>
           <div className="flex flex-col gap-2">
@@ -92,6 +93,7 @@ export default function Footer() {
         </FadeUp>
 
       </div>
+   </FadeUp>
     </footer>
   );
 }
